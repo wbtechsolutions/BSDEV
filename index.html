@@ -41,11 +41,19 @@
     <!-- BRAND / LOGO -->
 <a href="index.html" class="flex items-center gap-2 group shrink-0">
   <!-- Logo Image -->
-  <img 
-    src="img/wbtech-logo.png" 
-    alt="WB Tech Logo" 
-    class="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform" 
-  />
+  <!-- Light Theme Logo (Shown in Light Mode) -->
+<img 
+  src="img/wbtech-logo-dark.png" 
+  alt="WB Tech Logo" 
+  class="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform dark:hidden" 
+/>
+
+<!-- Dark Theme Logo (Shown in Dark Mode) -->
+<img 
+  src="img/wbtech-logo-light.png" 
+  alt="WB Tech Logo" 
+  class="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform hidden dark:block" 
+/>
 
 </a>
 
