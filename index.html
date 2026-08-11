@@ -9,7 +9,18 @@
   <meta name="color-scheme" content="light">
   <title>Front-End & UI/UX Specialist | BS WB.TECH</title>
   <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  (function () {
+    const theme = localStorage.getItem('theme');
 
+    // Only use dark if the user explicitly selected dark.
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
   <script>
     // Configure Tailwind for class-based dark mode
     tailwind.config = {
@@ -1110,30 +1121,26 @@
 
 
   <script>
-    // --- Light/Dark Theme Logic ---
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        // Default to dark mode or system preference
-        document.documentElement.classList.add('dark');
-      }
-    }
 
-    function toggleTheme() {
-      const html = document.documentElement;
-      if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
 
-    // Run theme setup on load
-    initTheme();
+function toggleTheme() {
+  const html = document.documentElement;
+
+  if (html.classList.contains('dark')) {
+    // Dark → Light
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Light → Dark
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Run when page loads
+initTheme();
+
+
 
     // --- Modal Logic ---
     function openCaseStudyModal() {
