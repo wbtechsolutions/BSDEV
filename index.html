@@ -9,18 +9,18 @@
   <meta name="color-scheme" content="light">
   <title>Front-End & UI/UX Specialist | BS WB.TECH</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  (function () {
-    const theme = localStorage.getItem('theme');
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme');
 
-    // Only use dark if the user explicitly selected dark.
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  })();
-</script>
+      // Only use dark if the user explicitly selected dark.
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
   <script>
     // Configure Tailwind for class-based dark mode
     tailwind.config = {
@@ -47,11 +47,11 @@
 
   <!-- ==================== STICKY NAVIGATION ==================== -->
   <header
-    class="w-full bg-white/90 dark:bg-slate-950/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+    class="w-full bg-white/90 dark:bg-slate-950/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 h-16 sm:h-20 flex items-center justify-between gap-4">
 
       <!-- BRAND / LOGO -->
-      <a href="index.html" class="flex items-center gap-2 group shrink-0">
+      <a href="/" class="flex items-center gap-2 group shrink-0">
         <!-- Logo Image -->
         <!-- Light Theme Logo (Shown in Light Mode) -->
         <img src="img/wbtech-logo-dark.png" alt="WB Tech Logo"
@@ -64,15 +64,14 @@
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-      <nav
-        class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-slate-600 dark:text-slate-300 text-sm xl:text-base">
-        <a href="#services" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
-        <a href="#work" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Work</a>
-        <a href="#process" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Process</a>
-        <a href="#pricing" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</a>
-        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
-        <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
-      </nav>
+      <nav id="desktopNav" class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-slate-600 dark:text-slate-300 text-sm xl:text-base">
+      <a href="#services" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Services</a>
+      <a href="#work" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Work</a>
+      <a href="#process" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Process</a>
+      <a href="#pricing" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Pricing</a>
+      <a href="#about" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+      <a href="#contact" class="nav-link transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+    </nav>
 
       <!-- RIGHT ACTION BUTTONS -->
       <div class="flex items-center gap-1.5 sm:gap-2.5">
@@ -80,7 +79,7 @@
         <!-- LIC INDIA LINK -->
         <a href="https://saathi.licindia.co.in/s/bishnu-charan-sahoo/0288758s" target="_blank" rel="noopener noreferrer"
           title="Buy LIC Policy Online"
-          class="flex items-center gap-1 px-2 sm:px-3 py-1 rounded-xl bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold border border-blue-900 dark:border-amber-100 shadow-sm transition-all shrink-0">
+          class="flex items-center gap-1 px-2 sm:px-3 py-1 lg:px-3 lg:py-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold border border-blue-900 dark:border-amber-100 shadow-sm transition-all shrink-0">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="w-10 sm:w-12 h-6"
             viewBox="-1200.916 47.731 196 97" preserveAspectRatio="xMidYMid meet">
             <g>
@@ -159,35 +158,26 @@
     </div>
 
     <!-- MOBILE MENU DRAWER -->
-    <div id="mobileMenu"
-      class="hidden lg:hidden px-6 pb-6 pt-2 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-xl">
-      <div class="flex flex-col gap-3 font-medium text-slate-700 dark:text-slate-200">
-        <a href="#services" onclick="toggleMobileMenu()"
-          class="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100 dark:border-slate-900">Services</a>
-        <a href="#work" onclick="toggleMobileMenu()"
-          class="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100 dark:border-slate-900">Work</a>
-        <a href="#process" onclick="toggleMobileMenu()"
-          class="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100 dark:border-slate-900">Process</a>
-        <a href="#pricing" onclick="toggleMobileMenu()"
-          class="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100 dark:border-slate-900">Pricing</a>
-        <a href="#about" onclick="toggleMobileMenu()"
-          class="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100 dark:border-slate-900">About</a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="py-2 hover:text-indigo-600 transition-colors">Contact</a>
+    <div id="mobileMenu" class="hidden lg:hidden px-6 pb-6 pt-2 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-xl">
+    <div class="flex flex-col gap-1 font-medium text-slate-700 dark:text-slate-200">
+      <a href="#services" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border-b border-slate-100 dark:border-slate-900">Services</a>
+      <a href="#work" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border-b border-slate-100 dark:border-slate-900">Work</a>
+      <a href="#process" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border-b border-slate-100 dark:border-slate-900">Process</a>
+      <a href="#pricing" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border-b border-slate-100 dark:border-slate-900">Pricing</a>
+      <a href="#about" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border-b border-slate-100 dark:border-slate-900">About</a>
+      <a href="#contact" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
 
-        <!-- Mobile Quick Action CTAs -->
-        <div class="grid grid-cols-2 gap-2 pt-2 sm:hidden">
-          <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20need%20a%20website%20for%20my%20business."
-            target="_blank"
-            class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs shadow-sm">
-            WhatsApp
-          </a>
-          <a href="#contact" onclick="toggleMobileMenu()"
-            class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-xs shadow-sm">
-            Get Quote
-          </a>
-        </div>
+      <!-- Mobile Quick Action CTAs -->
+      <div class="grid grid-cols-2 gap-2 pt-3 sm:hidden">
+        <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs shadow-sm">
+          WhatsApp
+        </a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-xs shadow-sm">
+          Get Quote
+        </a>
       </div>
     </div>
+  </div>
   </header>
 
 
@@ -195,32 +185,44 @@
   <main>
     <!-- ==================== 1. HERO SECTION ==================== -->
     <section
-      class="relative min-h-[78vh] flex items-center py-16 px-6 lg:px-12 overflow-hidden border-b border-slate-200 dark:border-slate-900">
+      class="relative min-h-[78vh] flex items-center py-16 px-6 lg:px-12 overflow-hidden border-b border-slate-200 dark:border-slate-900 bg-cover bg-center bg-no-repeat">
+
+      <!-- Soft Glow Overlay to keep text perfectly legible -->
+      <div class="absolute inset-0 bg-white/75 dark:bg-slate-950/85 backdrop-blur-[2px] pointer-events-none"></div>
+
+      <!-- Glow Accent -->
       <div
         class="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-indigo-500/10 dark:bg-indigo-600/15 blur-[130px] rounded-full pointer-events-none">
       </div>
-      <div class="max-w-7xl mx-auto w-full relative z-10
-            flex flex-col lg:flex-row
-            items-center justify-between gap-12">
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+      <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+
+        <!-- Left Column: Text & CTAs -->
+        <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
           <div
             class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Available for freelance &
-            local business projects
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Available for freelance & business projects
           </div>
-          <h1
-            class="text-4xl sm:text-5xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.08]">
-            Professional <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-teal-500 dark:from-indigo-400 dark:via-cyan-400 dark:to-teal-300">Web
-              Design & Frontend Development</span> That Grows Your Business</h1>
-          <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-            Modern UI, Responsive & Mobile-First Websites for Businesses, Professionals & Organizations.</p>
+
+          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.08]">
+            Professional
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-teal-500 dark:from-indigo-400 dark:via-cyan-400 dark:to-teal-300">
+              Web Design & Frontend Development
+            </span>
+            That Grows Your Business
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Modern UI, Responsive & Mobile-First Websites for Businesses, Professionals & Organizations.
+          </p>
+
+          <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <!-- Get Free Website Consultation Button with Calendar Icon -->
             <a href="#contact"
               class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/20 text-center transition-colors">
-              <!-- Heroicons calendar-days -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd"
                   d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zM19.5 9h-15v9.75a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V9zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 15a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM15.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM15.75 15a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                   clip-rule="evenodd" />
@@ -228,12 +230,10 @@
               Get Free Website Consultation
             </a>
 
-            <!-- Chat on WhatsApp Button with WhatsApp Icon -->
             <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20would%20like%20to%20discuss%20a%20website%20project."
               target="_blank"
               class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold shadow-lg shadow-emerald-600/20 text-center transition-colors">
-              <!-- Simple Icons WhatsApp -->
-              <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                 class="w-5 h-5">
                 <title>WhatsApp</title>
                 <path
@@ -242,59 +242,218 @@
               Chat on WhatsApp
             </a>
           </div>
+
+          <!-- Features List -->
           <div
             class="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm font-medium text-slate-500 dark:text-slate-400 pt-2">
-            <span>✓ 15+ Years Experience</span><span>✓ Mobile Responsive</span><span>✓
-              SEO-Friendly</span><span>✓ Direct Support</span>
+            <span>✓ 15+ Years Experience</span>
+            <span>✓ Mobile Responsive</span>
+            <span>✓ SEO-Friendly</span>
+            <span>✓ Direct Support</span>
           </div>
         </div>
-        <div class="lg:col-span-4">
+
+        <div class="lg:w-1/2 relative hidden lg:flex flex-col items-center justify-center">
+          <div class="relative w-full max-w-lg lg:max-w-md mx-auto">
+            <img src="img/hero-img.png" alt="Data and Analytics Consultation Illustration"
+              class="w-full h-auto object-contain drop-shadow-2xl" />
+          </div>
+        </div>
+        <!-- <div class="lg:w-1/2 relative flex flex-col items-center justify-center">
           <div
-            class="p-7 rounded-3xl bg-white/90 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-xl backdrop-blur">
-            <div class="text-sm font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
-              For Local Businesses</div>
-            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-3">Turn visitors into enquiries.</h2>
-            <p class="mt-3 text-slate-600 dark:text-slate-400">Build trust online with a professional
-              website, WhatsApp, Google Maps and clear enquiry calls-to-action.</p>
-            <div class="grid grid-cols-2 gap-3 mt-6 text-sm font-semibold">
+            class="relative lg:-mt-12 w-full max-w-md p-6 sm:p-8 rounded-3xl bg-white/85 dark:bg-slate-900/85 border border-slate-200/80 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/30">
+
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div
+                  class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-900/50">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
+                    <path d="M2 7h20" />
+                    <path d="M4 7v5" />
+                    <path d="M20 7v5" />
+                  </svg>
+                  For Local Businesses
+                </div>
+                <h2 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-3">
+                  Turn visitors into enquiries.
+                </h2>
+              </div>
+            </div>
+
+            <p class="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+              Build trust online with a professional website, WhatsApp integration, Google Maps, and clear enquiry
+              calls-to-action.
+            </p>
+
+            <div class="grid grid-cols-2 gap-2.5 mt-5 text-xs font-semibold">
+
               <div
-                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
-                Business Website</div>
+                class="group flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 text-slate-800 dark:text-slate-200 hover:border-indigo-500/40 hover:bg-white dark:hover:bg-slate-900 transition-all duration-200 shadow-sm">
+                <div
+                  class="p-1.5 rounded-lg bg-indigo-100/60 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="3" rx="2" />
+                    <line x1="8" x2="16" y1="21" y2="21" />
+                    <line x1="12" x2="12" y1="17" y2="21" />
+                    <path d="M2 8h20" />
+                  </svg>
+                </div>
+                <span>Business Website</span>
+              </div>
+
               <div
-                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
-                UI/UX Design</div>
+                class="group flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 text-slate-800 dark:text-slate-200 hover:border-indigo-500/40 hover:bg-white dark:hover:bg-slate-900 transition-all duration-200 shadow-sm">
+                <div
+                  class="p-1.5 rounded-lg bg-indigo-100/60 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                    <path d="M2 2l7.586 7.586" />
+                    <circle cx="11" cy="11" r="2" />
+                  </svg>
+                </div>
+                <span>UI/UX Design</span>
+              </div>
+
               <div
-                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
-                Redesign</div>
+                class="group flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 text-slate-800 dark:text-slate-200 hover:border-indigo-500/40 hover:bg-white dark:hover:bg-slate-900 transition-all duration-200 shadow-sm">
+                <div
+                  class="p-1.5 rounded-lg bg-indigo-100/60 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                    <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                    <path d="M16 16h5v5" />
+                  </svg>
+                </div>
+                <span>Redesign</span>
+              </div>
+
               <div
-                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
-                Maintenance</div>
+                class="group flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 text-slate-800 dark:text-slate-200 hover:border-indigo-500/40 hover:bg-white dark:hover:bg-slate-900 transition-all duration-200 shadow-sm">
+                <div
+                  class="p-1.5 rounded-lg bg-indigo-100/60 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                </div>
+                <span>Maintenance</span>
+              </div>
+
             </div>
           </div>
-        </div>
+        </div> -->
+
       </div>
     </section>
 
     <!-- Stats Bar -->
-    <section class="py-10 px-6 lg:px-12 border-b border-slate-200 dark:border-slate-900">
-      <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-        <div><b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">15+</b>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Years Experience</p>
+    <section class="relative py-12 px-6 lg:px-12 border-b border-slate-200/80 dark:border-slate-800/80 overflow-hidden bg-slate-50/50 dark:bg-slate-950/50 backdrop-blur-sm">
+  
+  <!-- Subtle Background Glow Effects -->
+  <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 bg-indigo-500/5 dark:bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-72 h-72 bg-teal-500/5 dark:bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+      
+      <!-- Stat 1: 15+ Years Experience -->
+      <div class="group relative p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center justify-center">
+        <div class="p-2.5 mb-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 8v4l3 3"/>
+            <circle cx="12" cy="12" r="9"/>
+          </svg>
         </div>
-        <div><b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">4+</b>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Featured Projects</p>
-        </div>
-        <div><b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">100%</b>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Responsive Focus</p>
-        </div>
-        <div><b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">UI/UX</b>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Design Expertise</p>
-        </div>
-        <div><b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">Direct</b>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Developer Support</p>
-        </div>
+        <b class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300">
+          15+
+        </b>
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
+          Years Experience
+        </p>
       </div>
-    </section>
+
+      <!-- Stat 2: 4+ Featured Projects -->
+      <div class="group relative p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center justify-center">
+        <div class="p-2.5 mb-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <b class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300">
+          4+
+        </b>
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
+          Featured Projects
+        </p>
+      </div>
+
+      <!-- Stat 3: 100% Responsive Focus -->
+      <div class="group relative p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center justify-center">
+        <div class="p-2.5 mb-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+            <path d="M12 18h.01"/>
+          </svg>
+        </div>
+        <b class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300">
+          100%
+        </b>
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
+          Responsive Focus
+        </p>
+      </div>
+
+      <!-- Stat 4: UI/UX Design Expertise -->
+      <div class="group relative p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center justify-center">
+        <div class="p-2.5 mb-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="m4.93 4.93 4.24 4.24"/>
+            <path d="m14.83 9.17 4.24-4.24"/>
+            <path d="m14.83 14.83 4.24 4.24"/>
+            <path d="m9.17 14.83-4.24 4.24"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <b class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300">
+          UI/UX
+        </b>
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
+          Design Expertise
+        </p>
+      </div>
+
+      <!-- Stat 5: Direct Developer Support -->
+      <div class="group relative p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center justify-center col-span-2 sm:col-span-1">
+        <div class="p-2.5 mb-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <b class="text-3xl sm:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-500 dark:from-indigo-400 dark:to-indigo-300">
+          Direct
+        </b>
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
+          Developer Support
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
     <!-- ==================== 3. CORE SERVICES ==================== -->
@@ -674,37 +833,84 @@
       </div>
     </section>
     <!-- About -->
-    <section id="about"
-      class="py-16 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-900">
-      <div class="max-w-5xl mx-auto text-center">
-        <span class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">About</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Hi, I'm Bishnu — Senior
-          Web Designer & Frontend Developer</h2>
-        <p class="max-w-3xl mx-auto mt-5 text-slate-600 dark:text-slate-400 leading-relaxed">With 15+ years of
-          experience in UI/UX, responsive web design and frontend development, I transform business
-          requirements and Figma/XD/Photoshop designs into modern, accessible and production-ready web
-          experiences.</p>
-        <div class="flex flex-wrap justify-center gap-2 mt-6 text-sm">
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Angular</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">React</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Next.js</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">JavaScript</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Bootstrap</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Tailwind
-            CSS</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">HTML5</span>
-          <span
-            class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">SCSS</span>
+    <section id="about" class="relative py-16 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-900 overflow-hidden">
+  
+  <!-- Subtle Glow Accent -->
+  <div class="absolute top-1/2 left-10 -translate-y-1/2 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
+      
+      <!-- Profile Photo Column -->
+      <div class="shrink-0 relative group">
+        <!-- Glow border ring behind photo -->
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-indigo-600 via-cyan-500 to-teal-400 rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+        
+        <!-- Image Card Container -->
+        <div class="relative w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-white dark:border-slate-800 shadow-2xl bg-slate-200 dark:bg-slate-800">
+          <img src="img/profile-img.jpg" alt="Bishnu Sahoo - Senior Web Designer & Frontend Developer" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+        </div>
+
+        <!-- Experience Floating Badge -->
+        <div class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-2 rounded-xl shadow-xl flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs font-bold text-slate-800 dark:text-slate-200">15+ Years Exp.</span>
         </div>
       </div>
-    </section>
+
+      <!-- Text & Bio Column -->
+      <div class="text-center lg:text-left space-y-4">
+        <div>
+          <span class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-xs sm:text-sm bg-indigo-50 dark:bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-900/50 inline-block">
+            About Me
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+            Hi, I'm Bishnu — Senior Web Designer & Frontend Developer
+          </h2>
+        </div>
+
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+          With over 15 years of professional experience in UI/UX design, responsive web design, and frontend development, I transform business requirements and Figma, XD, or Photoshop concepts into modern, accessible, and production-ready web experiences.
+        </p>
+
+        <!-- Tech Stack Pill Badges -->
+        <div class="pt-2">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3">
+            Core Tech Stack
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2 text-sm">
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              Angular
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              React
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              Next.js
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              JavaScript
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              Bootstrap
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              Tailwind CSS
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              HTML5
+            </span>
+            <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-medium shadow-sm hover:border-indigo-500/50 transition-colors">
+              SCSS
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
     <!-- ==================== 6. CLIENT TESTIMONIALS ==================== -->
     <!-- <section id="testimonials"
       class="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
@@ -779,7 +985,8 @@
                 class="text-indigo-600 dark:text-indigo-400 hover:underline">wbtechsolutionsinfo@gmail.com</a>
             </div>
           </div>
-          <div class="p-3  rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div
+            class="hidden lg:block p-3  rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3470031782754!2d85.8043538!3d20.2798794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21a78fb3b9a22363%3A0xa051b7a4f55f1b84!2sBS%20Website%20Design.%20Development%20In%20Bhubaneswar%2C%20Odisha!5e1!3m2!1sen!2sin!4v1786412341139!5m2!1sen!2sin"
               width="100%" height="330" style="border:0;" allowfullscreen="" loading="lazy"
@@ -1039,7 +1246,43 @@
   </div>
 
   <!-- ==================== JAVASCRIPT HANDLERS ==================== -->
+<!-- JavaScript for Active Menu Switching -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Classes applied to active links
+    const activeDesktopClasses = ["text-indigo-600", "dark:text-indigo-400", "font-bold"];
+    const activeMobileClasses = ["text-indigo-600", "dark:text-indigo-400", "bg-indigo-50", "dark:bg-indigo-950/50", "font-bold"];
 
+    const desktopLinks = document.querySelectorAll(".nav-link");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    // Helper function to set active link
+    function setActiveLink(links, activeLink, activeClasses) {
+      links.forEach(link => link.classList.remove(...activeClasses));
+      if (activeLink) {
+        activeLink.classList.add(...activeClasses);
+      }
+    }
+
+    // Attach click listeners for desktop navigation
+    desktopLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        setActiveLink(desktopLinks, this, activeDesktopClasses);
+      });
+    });
+
+    // Attach click listeners for mobile navigation
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        setActiveLink(mobileLinks, this, activeMobileClasses);
+        // Automatically close mobile menu on click
+        if (typeof toggleMobileMenu === "function") {
+          toggleMobileMenu();
+        }
+      });
+    });
+  });
+</script>
   <script>
     const SCRIPT_URL =
       "https://script.google.com/macros/s/AKfycbxtuoPt-HhEWGENosl_gmNWpSEptBJ8I_VzJMjf3IF8gxzgetiB_3anNOgA_1RZ-XrDVQ/exec";
@@ -1123,22 +1366,36 @@
   <script>
 
 
-function toggleTheme() {
-  const html = document.documentElement;
+    // function toggleTheme() {
+    //   const html = document.documentElement;
 
-  if (html.classList.contains('dark')) {
-    // Dark → Light
-    html.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  } else {
-    // Light → Dark
-    html.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  }
-}
+    //   if (html.classList.contains('dark')) {
+    //     // Dark → Light
+    //     html.classList.remove('dark');
+    //     localStorage.setItem('theme', 'light');
+    //   } else {
+    //     // Light → Dark
+    //     html.classList.add('dark');
+    //     localStorage.setItem('theme', 'dark');
+    //   }
+    // }
 
-// Run when page loads
-initTheme();
+    function toggleTheme() {
+      const html = document.documentElement;
+
+      if (html.classList.contains('light')) {
+        // light → Light
+        html.classList.remove('light');
+        localStorage.setItem('theme', 'Dark');
+      } else {
+        // Light → light
+        html.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Run when page loads
+    initTheme();
 
 
 

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer & Frontend Developer | BSDEV</title>
+    <meta name="description"
+        content="Professional website design and frontend development in India. Responsive business websites, UI/UX, Figma to React/Angular, website redesign and maintenance. 15+ years experience.">
+    <meta name="keywords"
+        content="web designer Bhubaneswar, website development Bhubaneswar, frontend developer Bhubaneswar, web design Odisha, business website design, UI UX designer Bhubaneswar">
+    <meta name="author" content="Bishnu Charan Sahoo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wbtechsolutions.github.io/BSDEV/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        };
+    </script>
+</head>
+
+<body
+    class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-300 pb-16 lg:pb-0">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl xl:text-2xl font-black tracking-tight text-slate-900 dark:text-white">WEB<span
+                    class="text-indigo-600 dark:text-indigo-400">.TECH</span></a>
+            <nav class="hidden lg:flex items-center gap-7 font-medium text-slate-600 dark:text-slate-300">
+                <a href="#services"
+                    class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
+                <a href="#work" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Work</a>
+                <a href="#process"
+                    class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Process</a>
+                <a href="#pricing"
+                    class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</a>
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#contact"
+                    class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20need%20a%20website%20for%20my%20business."
+                    target="_blank"
+                    class="hidden sm:inline-flex px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-colors">WhatsApp</a>
+                <a href="#contact"
+                    class="hidden sm:inline-flex px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors">Get
+                    Free Quote</a>
+                <button onclick="toggleMenu()"
+                    class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
+                    aria-label="Menu">
+                    <span id="openIcon">☰</span>
+                    <span id="closeIcon" class="hidden">✕</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="hidden lg:hidden px-6 pb-5 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex flex-col gap-4 pt-4 font-medium">
+                <a href="#services" onclick="toggleMenu()">Services</a>
+                <a href="#work" onclick="toggleMenu()">Work</a>
+                <a href="#process" onclick="toggleMenu()">Process</a>
+                <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+                <a href="#about" onclick="toggleMenu()">About</a>
+                <a href="#contact" onclick="toggleMenu()">Contact</a>
+                <a href="https://wa.me/917008152375" class="text-emerald-600 font-semibold">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-[78vh] flex items-center py-16 px-6 lg:px-12 overflow-hidden border-b border-slate-200 dark:border-slate-900">
+            <div
+                class="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-indigo-500/10 dark:bg-indigo-600/15 blur-[130px] rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Available for freelance & business projects
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.08]">
+                        Professional <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-teal-500 dark:from-indigo-400 dark:via-cyan-400 dark:to-teal-300">Web
+                            Design & Frontend Development</span>
+                    </h1>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                        <a href="#contact"
+                            class="px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/20 transition-colors text-center">Get
+                            Free Website Consultation</a>
+                        <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20would%20like%20to%20discuss%20a%20website%20project."
+                            target="_blank"
+                            class="px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold shadow-lg shadow-emerald-600/20 transition-colors text-center">Chat
+                            on WhatsApp</a>
+                    </div>
+                    <div
+                        class="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start text-sm font-medium text-slate-500 dark:text-slate-400 pt-2">
+                        <span>✓ 15+ Years Experience</span>
+                        <span>✓ Mobile Responsive</span>
+                        <span>✓ SEO-Friendly</span>
+                        <span>✓ Direct Support</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-4">
+                    <div
+                        class="p-7 rounded-3xl bg-white/90 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-xl backdrop-blur">
+                        <div class="text-sm font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
+                            For Businesses
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-3">Turn visitors into enquiries.
+                        </h2>
+                        <p class="mt-3 text-slate-600 dark:text-slate-400">Build trust online with a professional
+                            website, WhatsApp, Google Maps and clear enquiry calls-to-action.</p>
+                        <div class="grid grid-cols-2 gap-3 mt-6 text-sm font-semibold">
+                            <div
+                                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+                                Business Website</div>
+                            <div
+                                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+                                UI/UX Design</div>
+                            <div
+                                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+                                Redesign</div>
+                            <div
+                                class="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+                                Maintenance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics -->
+        <section class="py-10 px-6 lg:px-12 border-b border-slate-200 dark:border-slate-900">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+                <div>
+                    <b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">15+</b>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Years Experience</p>
+                </div>
+                <div>
+                    <b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">4+</b>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Featured Projects</p>
+                </div>
+                <div>
+                    <b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">100%</b>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Responsive Focus</p>
+                </div>
+                <div>
+                    <b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">UI/UX</b>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Design Expertise</p>
+                </div>
+                <div>
+                    <b class="text-3xl text-indigo-600 dark:text-indigo-400 font-extrabold">Direct</b>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Developer Support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-16 xl:py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">What
+                    I Offer</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Website Services for
+                    Your Businesses</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-3">Practical web solutions designed to build trust,
+                    improve visibility and generate enquiries.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card Item -->
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">01 ·
+                        BUSINESS WEBSITES</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Professional Business Website
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Modern pages that clearly
+                        explain your services and make it easy for customers to call, WhatsApp or enquire.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">02 ·
+                        UI/UX DESIGN</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Figma to Responsive Frontend
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Pixel-accurate, accessible
+                        interfaces converted from Figma, XD or Photoshop into production-ready code.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">03 ·
+                        WEBSITE REDESIGN</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Modernize Your Existing Website
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Improve layout, mobile
+                        experience, usability, performance and calls-to-action without losing your brand identity.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">04 ·
+                        LANDING PAGES</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Lead-Focused Landing Pages</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Campaign pages built around a
+                        clear offer, strong messaging and enquiry-focused user journeys.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">05 ·
+                        FRONTEND DEVELOPMENT</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">React · Angular · Next.js</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Responsive frontend
+                        development for dashboards, portals, enterprise applications and custom web experiences.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <b class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">06 ·
+                        MAINTENANCE</b>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Website Care & Updates</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Ongoing content updates, UI
+                        improvements, bug fixes and technical support after launch.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Target -->
+        <section
+            class="py-16 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-900">
+            <div class="max-w-7xl mx-auto text-center">
+                <span class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Who I
+                    Help</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Websites for Businesses &
+                    Organizations</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-3 mb-10">Professional online presence for businesses and
+                    independent professionals.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Doctors & Clinics</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Schools & Coaching</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Hotels & Restaurants</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Real Estate</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Lawyers & Consultants</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Retail & Local Shops</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Startups & Professionals</div>
+                    <div
+                        class="p-5 font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-slate-800 dark:text-slate-200">
+                        Organizations</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work / Projects -->
+        <section id="work"
+            class="py-16 xl:py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-900">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-5">
+                <div>
+                    <span
+                        class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Featured
+                        Work</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Real Projects, Real
+                        Experience</h2>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 max-w-md">Government, enterprise, dashboard and business
+                    projects demonstrating responsive UI and frontend development.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card -->
+                <article
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <img src="img/project1.webp" alt="Ama Shasana Odisha Portal Responsive Showcase"
+                        class="w-full block object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">
+                            HTML5 · Bootstrap 5 · JavaScript · Responsive UI</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Ama Shasana Citizen Portal
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Accessible, multilingual
+                            public feedback portal for public governance initiatives with cross-device responsive
+                            design.</p>
+                        <a href="https://amashasana.odisha.gov.in/" target="_blank"
+                            class="inline-block mt-4 text-indigo-600 dark:text-indigo-400 font-bold hover:underline">Visit
+                            Site ↗</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <img src="img/project2.webp" alt="Homswag Beauty Platform Responsive Showcase"
+                        class="w-full block object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">
+                            React / Web UI · Tailwind CSS · E-Commerce</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Homswag - At-Home Salon &
+                            Beauty Platform</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Conversion-focused service
+                            platform with location selection, service menus and booking workflows.</p>
+                        <a href="https://www.homswag.com/" target="_blank"
+                            class="inline-block mt-4 text-indigo-600 dark:text-indigo-400 font-bold hover:underline">Visit
+                            Site ↗</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <img src="img/project3.webp" alt="Odisha COVID Dashboard Analytics Showcase"
+                        class="w-full block object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">
+                            Data Visualization · JavaScript · Interactive Maps</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">COVID-19 Real-Time Analytics
+                            Dashboard</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">State-level analytics
+                            platform with interactive maps, district reporting charts and hospital information.</p>
+                        <a href="https://coviddashboard.odisha.gov.in/" target="_blank"
+                            class="inline-block mt-4 text-indigo-600 dark:text-indigo-400 font-bold hover:underline">Visit
+                            Site ↗</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300">
+                    <img src="img/project4.webp" alt="Biharsharif Municipal Portal Responsive Showcase"
+                        class="w-full block object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">
+                            Bootstrap · Citizen Services · Responsive Design</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white my-2.5">Biharsharif Municipal
+                            Corporation Portal</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Citizen services
+                            application for property tax, trade licensing and municipal services.</p>
+                        <a href="https://biharsharifnagarnigam.co.in/home" target="_blank"
+                            class="inline-block mt-4 text-indigo-600 dark:text-indigo-400 font-bold hover:underline">Visit
+                            Site ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pricing Packages -->
+        <section id="pricing"
+            class="py-16 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-900">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Simple
+                    Packages</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Website Packages</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-3">Starting prices are indicative. Final pricing depends
+                    on pages, content, features and integrations.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 items-stretch">
+                <!-- Standard Price Card -->
+                <div
+                    class="p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <b
+                            class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">STARTER</b>
+                        <strong
+                            class="block text-3xl font-extrabold text-slate-900 dark:text-white my-2">₹4,999+</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">For individuals and small businesses.</p>
+                        <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                            <li>✓ 3–5 responsive pages</li>
+                            <li>✓ WhatsApp & Call CTA</li>
+                            <li>✓ Google Maps</li>
+                            <li>✓ Contact form</li>
+                            <li>✓ Basic SEO-ready structure</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="block text-center mt-6 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Get
+                        Started</a>
+                </div>
+
+                <!-- Featured Price Card -->
+                <div
+                    class="relative p-7 bg-indigo-600 text-white border border-indigo-600 rounded-2xl shadow-xl -translate-y-1 flex flex-col justify-between">
+                    <span
+                        class="absolute right-4 -top-3 bg-amber-400 text-slate-900 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase">POPULAR</span>
+                    <div>
+                        <b class="text-xs tracking-widest font-bold text-indigo-200 uppercase">BUSINESS</b>
+                        <strong class="block text-3xl font-extrabold text-white my-2">₹4,999+</strong>
+                        <p class="text-indigo-100 text-sm">For growing businesses.</p>
+                        <ul class="mt-5 space-y-2 text-sm text-indigo-100">
+                            <li>✓ 5–10 responsive pages</li>
+                            <li>✓ Custom UI design</li>
+                            <li>✓ WhatsApp, Maps & enquiry forms</li>
+                            <li>✓ SEO-friendly structure</li>
+                            <li>✓ Analytics integration</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="block text-center mt-6 p-3 rounded-xl bg-white text-indigo-700 font-bold hover:bg-indigo-50 transition-colors">Request
+                        Quote</a>
+                </div>
+
+                <!-- Standard Price Card -->
+                <div
+                    class="p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <b
+                            class="text-xs tracking-widest font-bold text-indigo-600 dark:text-indigo-400 uppercase">PROFESSIONAL</b>
+                        <strong
+                            class="block text-3xl font-extrabold text-slate-900 dark:text-white my-2">₹17,999+</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">For custom and advanced websites.</p>
+                        <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                            <li>✓ Custom UI/UX</li>
+                            <li>✓ Advanced frontend</li>
+                            <li>✓ CMS / blog options</li>
+                            <li>✓ Performance optimization</li>
+                            <li>✓ Ongoing support options</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="block text-center mt-6 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Discuss
+                        Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work With Me -->
+        <section
+            class="py-16 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-900">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span
+                        class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Why
+                        Work With Me</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Senior experience
+                        without agency layers.</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">You work directly with an
+                        experienced UI and frontend professional from discussion and design through development and
+                        launch.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div
+                        class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                        <b class="block font-bold text-slate-900 dark:text-white">15+ Years Experience</b>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Senior-level design and frontend
+                            expertise.</p>
+                    </div>
+                    <div
+                        class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                        <b class="block font-bold text-slate-900 dark:text-white">Direct Communication</b>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">No unnecessary middle layer.</p>
+                    </div>
+                    <div
+                        class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                        <b class="block font-bold text-slate-900 dark:text-white">Responsive by Default</b>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Designed for mobile, tablet and
+                            desktop.</p>
+                    </div>
+                    <div
+                        class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                        <b class="block font-bold text-slate-900 dark:text-white">Post-Launch Support</b>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Updates, fixes and maintenance
+                            available.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process / Steps -->
+        <section id="process" class="py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Workflow</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Simple, Streamlined
+                    Process</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-5">
+                <div
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                    <b class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">01</b>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white my-1.5">Free Consultation</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Understand your business,
+                        goals and requirements.</p>
+                </div>
+                <div
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                    <b class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">02</b>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white my-1.5">Plan & Design</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Define pages, user journey,
+                        content and visual direction.</p>
+                </div>
+                <div
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                    <b class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">03</b>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white my-1.5">Develop</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Build responsive, clean and
+                        scalable frontend code.</p>
+                </div>
+                <div
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                    <b class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">04</b>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white my-1.5">Test & Launch</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Check mobile, browser,
+                        performance and deploy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about"
+            class="py-16 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-900">
+            <div class="max-w-5xl mx-auto text-center">
+                <span
+                    class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">About</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Hi, I'm Bishnu — Senior
+                    Web Designer & Frontend Developer</h2>
+                <p class="max-w-3xl mx-auto mt-5 text-slate-600 dark:text-slate-400 leading-relaxed">With 15+ years of
+                    experience in UI/UX, responsive web design and frontend development, I transform business
+                    requirements and Figma/XD/Photoshop designs into modern, accessible and production-ready web
+                    experiences.</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-6 text-sm">
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Angular</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">React</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Next.js</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">JavaScript</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Bootstrap</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Tailwind
+                        CSS</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">HTML5</span>
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">SCSS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"
+            class="py-16 xl:py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-900">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5">
+                    <span
+                        class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">Get
+                        Started</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Get a free website
+                        consultation.</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Tell me about your business or
+                        existing website. I can suggest the right pages, features and approach before you commit.</p>
+                    <div class="mt-7 space-y-3">
+                        <a href="https://wa.me/917008152375?text=Hi%20Bishnu%2C%20I%20want%20a%20free%20website%20consultation."
+                            target="_blank"
+                            class="block text-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-colors">💬
+                            Chat on WhatsApp</a>
+                        <a href="tel:+917008152375"
+                            class="block text-center px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors">☎
+                            Call +91-70081 52375</a>
+                    </div>
+                    <div class="mt-6 text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                        <p>📍 <b>India</b></p>
+                        <p>✉ <a href="mailto:wbtechsolutionsinfo@gmail.com"
+                                class="text-indigo-600 dark:text-indigo-400 hover:underline">wbtechsolutionsinfo@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div
+                    class="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Request a Website Quote</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 mb-6">Share your requirements and I'll get
+                        back to you.</p>
+                    <form action="https://formsubmit.co/f1824238b537b10e20af5409582d8d8d" method="POST" target="_blank"
+                        class="space-y-5">
+                        <input type="hidden" name="_subject" value="New Website Inquiry - BSDEV">
+                        <input type="text" name="_honey" class="hidden">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next"
+                            value="https://wbtechsolutions.github.io/BSDEV/thank-you.html">
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Name *
+                                <input type="text" name="Name" required placeholder="Your name"
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                            </label>
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Business Name
+                                <input type="text" name="Business Name" placeholder="Your business"
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                            </label>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Mobile /
+                                WhatsApp *
+                                <input type="tel" name="Mobile" required placeholder="+91"
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                            </label>
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Email
+                                <input type="email" name="Email" placeholder="you@example.com"
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                            </label>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Service Needed
+                                *
+                                <select name="Service" required
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option>New Business Website</option>
+                                    <option>Website Redesign</option>
+                                    <option>UI/UX Design</option>
+                                    <option>Figma to Frontend</option>
+                                    <option>Landing Page</option>
+                                    <option>Website Maintenance</option>
+                                </select>
+                            </label>
+                            <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Budget Range *
+                                <select name="Budget" required
+                                    class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                                    <option value="" disabled selected>Select budget</option>
+                                    <option>Under ₹10,000</option>
+                                    <option>₹10,000 – ₹20,000</option>
+                                    <option>₹20,000 – ₹35,000</option>
+                                    <option>₹35,000+</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label class="block font-semibold text-slate-700 dark:text-slate-300 text-sm">Website / Project
+                            Details *
+                            <textarea name="Project Brief" rows="5" required
+                                placeholder="Tell me about your business, existing website, pages and features you need..."
+                                class="block w-full mt-2 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"></textarea>
+                        </label>
+                        <button type="submit"
+                            class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors">Get
+                            My Free Consultation →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-6 lg:px-12 max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span
+                    class="font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 text-sm">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Website Design Questions
+                </h2>
+            </div>
+            <div class="space-y-3">
+                <details
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm cursor-pointer group">
+                    <summary
+                        class="font-bold text-slate-900 dark:text-white list-none flex justify-between items-center">
+                        Do you design websites for clients across India?
+                        <span
+                            class="text-indigo-600 dark:text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Yes. I provide business
+                        website design, frontend development, redesign and maintenance for businesses in India and
+                        remote clients across India.</p>
+                </details>
+                <details
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm cursor-pointer group">
+                    <summary
+                        class="font-bold text-slate-900 dark:text-white list-none flex justify-between items-center">
+                        Can you add WhatsApp, Google Maps and enquiry forms?
+                        <span
+                            class="text-indigo-600 dark:text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Yes. These can be
+                        included to make it easier for visitors to call, message, find your business and submit
+                        enquiries.</p>
+                </details>
+                <details
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm cursor-pointer group">
+                    <summary
+                        class="font-bold text-slate-900 dark:text-white list-none flex justify-between items-center">
+                        Can you redesign my existing website?
+                        <span
+                            class="text-indigo-600 dark:text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Yes. I can improve visual
+                        design, responsive behavior, usability, frontend code and conversion-focused calls-to-action.
+                    </p>
+                </details>
+                <details
+                    class="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm cursor-pointer group">
+                    <summary
+                        class="font-bold text-slate-900 dark:text-white list-none flex justify-between items-center">
+                        Do you provide website maintenance?
+                        <span
+                            class="text-indigo-600 dark:text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Yes. Ongoing content
+                        updates, bug fixes, UI improvements and technical support can be arranged after launch.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Mobile Sticky Navigation -->
+    <div
+        class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur border-t border-slate-200 dark:border-slate-800 p-2">
+        <div class="grid grid-cols-3 gap-2 max-w-lg mx-auto">
+            <a href="tel:+917008152375"
+                class="text-center py-2.5 rounded-lg bg-indigo-600 text-white text-sm font-semibold">☎ Call</a>
+            <a href="https://wa.me/917008152375"
+                class="text-center py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-semibold">WhatsApp</a>
+            <a href="#contact"
+                class="text-center py-2.5 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold">Get
+                Quote</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-900 text-sm text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-2">
+            <p>© 2026 <b class="text-indigo-600 dark:text-indigo-400 font-bold">BSDEV</b> · Web Design & Frontend
+                Development</p>
+            <p>India · <a href="mailto:wbtechsolutionsinfo@gmail.com"
+                    class="hover:underline">wbtechsolutionsinfo@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('mobileMenu'),
+                o = document.getElementById('openIcon'),
+                c = document.getElementById('closeIcon');
+            m.classList.toggle('hidden');
+            o.classList.toggle('hidden');
+            c.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
